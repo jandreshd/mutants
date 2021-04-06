@@ -47,14 +47,11 @@ def contarSecuencia(adn):
     return contador
 
 def encontrarSecuenciaHorizontal(adn): 
-    print (" == Secuencia Horizontal Original == ")
     imprimirSecuenciaAnd(adn)
     return contarSecuencia(adn)
 
 def encontrarSecuenciaVertical(adn):
-    print (" == Secuencia Vertical == ")
     adnVertical = convertirListToString(trasponerSecuenciaAdn(adn))
-    imprimirSecuenciaAnd(adnVertical)
     return contarSecuencia(adnVertical)
 
 def esMutante(adnMutante):
