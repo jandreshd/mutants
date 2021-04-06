@@ -4,7 +4,6 @@ SECUENCIA_BASE_NITROGENADA = ["A"*4,"C"*4, "T"*4, "G"*4]
 def esAdnValido(adn):
     if type(adn) is not list or len(adn) < 4:
         return False
-
     if contieneBaseNitrogenada(adn):
         longitudAnd = len(adn)
         for secuenciaAdn in adn:
@@ -47,7 +46,7 @@ def contarSecuencia(adn):
     return contador
 
 def encontrarSecuenciaHorizontal(adn): 
-    imprimirSecuenciaAnd(adn)
+    #imprimirSecuenciaAnd(adn)
     return contarSecuencia(adn)
 
 def encontrarSecuenciaVertical(adn):
@@ -60,8 +59,7 @@ def esMutante(adnMutante):
         print (f"Encontro {contadorSecuenciaAdn} Suencias ADN")
         if (contadorSecuenciaAdn > 1):
             return True
-        else:
-            return False
+    return False
 
 def imprimirSecuenciaAnd(adn):
     for a in adn:

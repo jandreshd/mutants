@@ -24,7 +24,8 @@ def existeDNA(dna):
 def guardarSecuenciaAdn(dna, esMutant):
     if existeDNA(dna) is None:
         fechaSistema = datetime.now().strftime('%Y-%m-%d') 
-        cantidad = db.mutants.count_documents({})   
-        dic={'_id':cantidad + 1,'fecha':fechaSistema, 'adn': str(dna), 'esMutante': esMutant}
+        dic={'fecha':fechaSistema, 'adn': str(dna), 'esMutante': esMutant}
         db.mutants.insert_one(dic)
         return {"codigoRespuesta": 0, "mensajeRepuesta": "Secuencia ADN Registrada Exitosamente"}
+    else:
+        return {"codigoRespuesta": 10, "mensajeRepuesta": "Ya Existe Secuencia ADN"}
