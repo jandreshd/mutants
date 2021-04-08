@@ -8,7 +8,7 @@ app = Flask(__name__)
 #{secuenciaAdn : ['ATGCGA','CAGTGC',"TTATGT','AGAAGG','CCGCTA','TCACGC']}
 @app.route('/')
 def index():
-    return "Hola Mundo!, por favor funciona"
+    return "Hola"
 
 @app.route('/mutant', methods=['POST'])
 def mutant():
