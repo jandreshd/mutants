@@ -6,6 +6,10 @@ from conexionDB.dbMutants import guardarSecuenciaAdn
 app = Flask(__name__)
 
 #{secuenciaAdn : ['ATGCGA','CAGTGC',"TTATGT','AGAAGG','CCGCTA','TCACGC']}
+@app.route('/')
+def index():
+    return "Hola Mundo!, por favor funciona"
+
 @app.route('/mutant', methods=['POST'])
 def mutant():
     esUnMutante = False
